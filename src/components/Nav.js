@@ -24,6 +24,7 @@ export default function Nav() {
       alt='Netflix logo'
       src="https://cdn-icons-png.flaticon.com/512/5977/5977590.png"
       className='nav__logo'
+      //새로고침
       onClick={()=>window.location.reload}/>
       <img 
       alt='User logged'

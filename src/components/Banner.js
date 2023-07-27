@@ -20,15 +20,17 @@ export default function Banner() {
     const movieId = request.data.results[
       Math.floor(Math.random() * request.data.results.length)
     ].id
-
+    console.log(request)
     //특정 영화의 더 상세한 정보를 가져오기(비디오 정보 포함)
     const {data: movieDetail} = await axios.get(`movie/${movieId}`, {
       params: {append_to_response: "videos" },
     })
     setMovie(movieDetail)
+    console.log('movie', movieDetail)
   }
 
   const truncate = (str, n) => {
+    //substr(start, length)
     return str?.length > n ? str.substr(0, n-1) + "..." : str
   }
 
